@@ -1,0 +1,46 @@
+<?xml version='1.0'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="net.common.model">
+
+    <class name="Player" table="Player">
+        <id name="id" type="int" column="id" >
+            <generator class="assigned" />
+        </id>
+
+        <property name="LastName" type="string" length="30">
+            <column name="LastName"></column>
+        </property>
+
+        <property name="FirstName" type="string" length="30">
+            <column name="FirstName"></column>
+        </property>
+
+        <property name="Gender" type="char">
+            <column name="Gender"></column>
+        </property>
+
+        <property name="Height" type="double">
+            <column name="Height"></column>
+        </property>
+
+        <property name="ShirtNumber" type="string" length="10">
+            <column name="ShirtNumber"></column>
+        </property>
+
+        <property name="Email" type="string" length="50">
+            <column name="Email"></column>
+        </property>
+
+        <property name="CountryCode" type="string" length="3">
+            <column name="CountryCode"></column>
+        </property>
+
+        <property name="TeamId" type="int">
+            <column name="TeamId"></column>
+        </property>
+    </class>
+
+</hibernate-mapping>
